@@ -6,6 +6,9 @@ const LoaderStyled = styled.small`
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
+  background: #f00;
+  width: 80px;
+  height: 80px;
 `;
 
 export default LoaderStyled;

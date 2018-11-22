@@ -3,11 +3,11 @@ import { shallowToJson } from 'enzyme-to-json';
 import 'jest-styled-components';
 import { shallowWithTheme } from '../../../utils/test_config/testHelpers';
 
-import Loading from './Loading';
+import Features from './Features';
 
-describe('Loading', () => {
+describe('Features', () => {
   it('should render correctly', () => {
-    const element = shallowWithTheme(<Loading loading />);
+    const element = shallowWithTheme(<Features />);
     expect(shallowToJson(element)).toMatchSnapshot();
   });
 });
