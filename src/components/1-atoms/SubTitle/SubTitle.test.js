@@ -6,18 +6,18 @@ import {
   mountWithTheme,
 } from '../../../utils/test_config/testHelpers';
 
-import PageTitle from './PageTitle';
+import SubTitle from './SubTitle';
 
-const Title = 'Test Title';
+const Title = 'Test Subtitle';
 
-describe('PageTitle', () => {
+describe('SubTitle', () => {
   it('should render correctly', () => {
-    const element = shallowWithTheme(<PageTitle title={Title} />);
+    const element = shallowWithTheme(<SubTitle title={Title} />);
     expect(shallowToJson(element)).toMatchSnapshot();
   });
 
   it('should return the correct text', () => {
-    const element = mountWithTheme(<PageTitle title={Title} />);
+    const element = mountWithTheme(<SubTitle title={Title} />);
     expect(element.text()).toBe(Title);
   });
 });

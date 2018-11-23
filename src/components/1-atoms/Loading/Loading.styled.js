@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const LoaderStyled = styled.small`
-  display ${props => (props.loading ? "block" : "none")};
   left: 50%;
   position: fixed;
   top: 50%;

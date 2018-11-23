@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import FourOhFour from '../../5-pages/FourOhFour/FourOhFour';
-import Home from '../../5-pages/Home/Home';
-import Features from '../../5-pages/Features/Features';
 import RoutesTransition, { Content } from './Routes.styled';
 import { loadDelay } from '../../../utils/constants/constants';
+import Loading from '../../1-atoms/Loading/Loading';
+
+// Use React.lazy for lazyload / code splitting
+const Home = lazy(() => import('../../5-pages/Home/Home'));
+const Features = lazy(() => import('../../5-pages/Features/Features'));
+const FourOhFour = lazy(() => import('../../5-pages/FourOhFour/FourOhFour'));
 
 const mapStateToProps = state => ({
   loading: state.loading,
@@ -28,11 +31,13 @@ const Routes = ({ ...props }) => {
       >
         <RoutesTransition className="fade">
           <Content>
-            <Switch location={location}>
-              <Route exact path="/" component={() => <Home />} />
-              <Route exact path="/features" component={() => <Features />} />
-              <Route component={FourOhFour} />
-            </Switch>
+            <Suspense fallback={<Loading />}>
+              <Switch location={location}>
+                <Route exact path="/" component={() => <Home />} />
+                <Route path="/features" component={() => <Features />} />
+                <Route component={FourOhFour} />
+              </Switch>
+            </Suspense>
           </Content>
         </RoutesTransition>
       </CSSTransition>
