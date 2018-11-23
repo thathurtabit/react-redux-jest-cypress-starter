@@ -1,3 +1,14 @@
+## Featuring 
+
++ [React](https://reactjs.org/)
++ [Redux](https://redux.js.org/)
++ [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
++ [StyledComponents](https://www.styled-components.com/)
++ [React Transition Group](https://reactcommunity.org/react-transition-group/)
++ [Jest](https://jestjs.io/en/)
++ [Enzyme](https://airbnb.io/enzyme/)
++ [Cypress](https://www.cypress.io/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
