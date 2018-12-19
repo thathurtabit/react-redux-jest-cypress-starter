@@ -35,7 +35,7 @@ const Routes = ({ ...props }) => {
               <Switch location={location}>
                 <Route exact path="/" component={() => <Home />} />
                 <Route path="/features" component={() => <Features />} />
-                <Route component={FourOhFour} />
+                <Route component={() => <FourOhFour />} />
               </Switch>
             </Suspense>
           </Content>
