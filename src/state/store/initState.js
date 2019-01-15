@@ -3,6 +3,7 @@ const initState = {
   data: {
     fetching: false,
     response: [],
+    fetchError: false,
   },
 };
 

@@ -1,12 +1,18 @@
 const theme = {
   colors: {
     brand: '#61dafb',
+    bodyBg: '#040f13',
   },
   fonts: {
     baseSize: '16px',
   },
   links: {
-    active: '#fff',
+    color: '#61dafb',
+    activeBg: '#fff',
+    activeColor: '#040f13',
+  },
+  loader: {
+    dots: '#ccc',
   },
   transition: {
     duration: '0.8s',

@@ -18,4 +18,51 @@ describe('rootReducer', () => {
       isReady: false,
     });
   });
+
+  it('should handle REQUEST_DATA', () => {
+    expect(
+      reducer(initState, {
+        type: types.REQUEST_DATA,
+        payload: true,
+      })
+    ).toEqual({
+      ...initState,
+      data: {
+        ...initState.data,
+        fetching: true,
+      },
+    });
+  });
+
+  it('should handle REQUEST_DATA_ERROR', () => {
+    expect(
+      reducer(initState, {
+        type: types.REQUEST_DATA_ERROR,
+        payload: 'Error',
+      })
+    ).toEqual({
+      ...initState,
+      data: {
+        ...initState.data,
+        fetchError: 'Error',
+        fetching: false,
+      },
+    });
+  });
+
+  it('should handle RECEIVE_EXAMPLE_DATA', () => {
+    expect(
+      reducer(initState, {
+        type: types.RECEIVE_EXAMPLE_DATA,
+        payload: [],
+      })
+    ).toEqual({
+      ...initState,
+      data: {
+        ...initState.data,
+        response: [],
+        fetching: false,
+      },
+    });
+  });
 });

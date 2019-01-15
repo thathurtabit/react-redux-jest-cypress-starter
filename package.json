@@ -18,7 +18,8 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.1.1",
     "uuid": "^3.3.2",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

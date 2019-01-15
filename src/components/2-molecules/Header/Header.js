@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import HeaderStyled, { Link } from "./Header.styled";
+import HeaderStyled, { Link } from './Header.styled';
 
 const Header = () => (
   <HeaderStyled>
@@ -9,6 +9,9 @@ const Header = () => (
     </Link>
     <Link to="/features" exact activeClassName="active" title="Features">
       Features
+    </Link>
+    <Link to="/fetch-data" exact activeClassName="active" title="Fetch Data">
+      Fetch
     </Link>
   </HeaderStyled>
 );

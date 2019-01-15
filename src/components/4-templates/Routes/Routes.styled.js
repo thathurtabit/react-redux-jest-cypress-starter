@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Content = styled.section`
   opacity: 0;
-  overflow: hidden;
+  //overflow: hidden;
   transform: translateY(20px);
   transition: opacity ${props => props.theme.transition.duration}
       ${props => props.theme.transition.easeOut},
