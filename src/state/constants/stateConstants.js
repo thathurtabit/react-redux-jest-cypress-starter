@@ -1,1 +1,1 @@
-export const ON_LOAD = "ON_LOAD";
+export const SET_READY = 'SET_READY';

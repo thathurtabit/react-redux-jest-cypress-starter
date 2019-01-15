@@ -1,5 +1,9 @@
 const initState = {
-  loading: true
+  isReady: false,
+  data: {
+    fetching: false,
+    response: [],
+  },
 };
 
 export default initState;

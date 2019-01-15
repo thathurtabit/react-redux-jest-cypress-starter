@@ -1,9 +1,9 @@
-import * as types from "../constants/stateConstants";
+import * as types from '../constants/stateConstants';
 
 const rootReducer = (state = {}, action) => {
   switch (action.type) {
-    case types.ON_LOAD:
-      return { ...state, loading: action.payload };
+    case types.SET_READY:
+      return { ...state, isReady: action.payload };
     default:
       return state;
   }
