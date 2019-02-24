@@ -14,7 +14,7 @@ const FetchData = lazy(() => import('../../5-pages/FetchData/FetchData'));
 const FourOhFour = lazy(() => import('../../5-pages/FourOhFour/FourOhFour'));
 
 const mapStateToProps = state => ({
-  isReady: state.isReady,
+  isReady: state.app.isReady,
 });
 
 const Routes = ({ location, isReady }) => {

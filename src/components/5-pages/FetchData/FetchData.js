@@ -8,9 +8,9 @@ import { fetchExampleData } from '../../../state/actions/fetchExampleData';
 import { api } from '../../../utils/constants/constants';
 
 const mapStateToProps = state => ({
-  response: state.data.response,
-  fetching: state.data.fetching,
-  fetchError: state.data.fetchError,
+  response: state.app.data.response,
+  fetching: state.app.data.fetching,
+  fetchError: state.app.data.fetchError,
 });
 
 const mapDispatchToProps = dispatch => ({

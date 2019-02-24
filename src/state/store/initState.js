@@ -1,9 +1,12 @@
 const initState = {
-  isReady: false,
-  data: {
-    fetching: false,
-    response: [],
-    fetchError: false,
+  router: {},
+  app: {
+    isReady: false,
+    data: {
+      fetching: false,
+      response: [],
+      fetchError: false,
+    },
   },
 };
 

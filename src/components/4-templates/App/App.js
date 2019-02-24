@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import PropTypes from 'prop-types';
 import WebFont from 'webfontloader';
-import { createBrowserHistory } from 'history';
 import { Route } from 'react-router-dom';
+import { history } from '../../../state/store/store';
 import GATracker from '../../../utils/helpers/GATracker';
 import theme from '../../../theme/theme';
 import Routes from '../Routes/Routes';
@@ -13,8 +13,6 @@ import Header from '../../2-molecules/Header/Header';
 import AppStyled, { GlobalStyles } from './App.styled';
 import ScrollToTop from '../../../utils/helpers/ScrollToTop';
 import { setReady } from '../../../state/actions/setReady';
-
-const history = createBrowserHistory();
 
 const GlobalStyle = createGlobalStyle`
   ${GlobalStyles};
